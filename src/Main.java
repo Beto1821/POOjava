@@ -1,11 +1,17 @@
 public class Main {
     public static void main(String[] args) {
-        Movie newMovie = new Movie();
+        Movie meuFilme = new Movie();
+        meuFilme.nome = "O poderoso chefão";
+        meuFilme.anoDeLancamento = 1970;
+        meuFilme.duracaoEmMinutos = 180;
 
-        newMovie.nome =  "StarWars";
-        newMovie.anoDeLançamento = 1978;
-        newMovie.duracaoEmMinutos = 180;
+        meuFilme.exibeFichaTecnica();
+        meuFilme.avalia(8);
+        meuFilme.avalia(5);
+        meuFilme.avalia(10);
+        System.out.println(meuFilme.somaDasAvaliacoes);
+        System.out.println(meuFilme.totalDeAvaliacoes);
+        System.out.println(meuFilme.pegaMedia());
 
-        System.out.println(newMovie.nome);
     }
 }
