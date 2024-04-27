@@ -12,48 +12,36 @@ public class Movie {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public int getAnoDeLancamento() {
         return anoDeLancamento;
-    }
-
-    public void setAnoDeLancamento(int anoDeLancamento) {
-        this.anoDeLancamento = anoDeLancamento;
     }
 
     public boolean isIncluidoNoPlano() {
         return incluidoNoPlano;
     }
 
-    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
-        this.incluidoNoPlano = incluidoNoPlano;
-    }
-
-    public double getSomaDasAvaliacoes() {
-        return somaDasAvaliacoes;
-    }
-
-    public void setSomaDasAvaliacoes(double somaDasAvaliacoes) {
-        this.somaDasAvaliacoes = somaDasAvaliacoes;
-    }
-
-    public void setTotalDeAvaliacoes(int totalDeAvaliacoes) {
-        this.totalDeAvaliacoes = totalDeAvaliacoes;
-    }
-
     public int getDuracaoEmMinutos() {
         return duracaoEmMinutos;
     }
 
-    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
-        this.duracaoEmMinutos = duracaoEmMinutos;
+    public int getTotalDeAvaliacoes() {
+        return totalDeAvaliacoes;
     }
 
-    public int getTotalDeAvaliacoes(){
-        return totalDeAvaliacoes;
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
+        this.incluidoNoPlano = incluidoNoPlano;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
     public void exibeFichaTecnica(){
