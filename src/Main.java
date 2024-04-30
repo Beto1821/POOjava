@@ -1,5 +1,10 @@
+import br.com.alura.screenmatch.calculos.Recomend;
+import br.com.alura.screenmatch.calculos.TimeCount;
+import br.com.alura.screenmatch.modelos.Episode;
 import br.com.alura.screenmatch.modelos.Movie;
 import br.com.alura.screenmatch.modelos.Serie;
+
+import java.sql.SQLOutput;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,5 +26,27 @@ public class Main {
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemperoda(10);
+        System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinutos());
+
+        Movie outroFilme = new Movie();
+        outroFilme.setNome("Robocop");
+        outroFilme.setAnoDeLancamento(2023);
+        outroFilme.setDuracaoEmMinutos(200);
+
+        TimeCount calculadora = new TimeCount();
+        calculadora.inclui(meuFilme);
+        calculadora.inclui(outroFilme);
+        calculadora.inclui(lost);
+        System.out.println(calculadora.getTempoTotal());
+
+        Recomend filtro = new Recomend();
+        filtro.Filtra(meuFilme);
+
+        Episode episodio = new Episode();
+        episodio.setNumero(1);
+        episodio.setSerie(lost);
+        episodio.setTotalVisualizacoes(300);
+        filtro.Filtra(episodio);
+
     }
 }

@@ -1,6 +1,8 @@
 package br.com.alura.screenmatch.modelos;
 
-public class Movie extends Title{
+import br.com.alura.screenmatch.calculos.Classifield;
+
+public class Movie extends Title implements Classifield {
     private String diretor;
 
     public String getDiretor() {
@@ -9,5 +11,10 @@ public class Movie extends Title{
 
     public void setDiretor(String diretor) {
         this.diretor = diretor;
+    }
+
+    @Override
+    public int getClassificacao() {
+        return (int) pegaMedia() / 2;
     }
 }
